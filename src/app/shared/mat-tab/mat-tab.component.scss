@@ -1,0 +1,90 @@
+.view-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    padding-inline-end: 50px;
+    margin-bottom: 20px;
+}
+
+.slide-button {
+    display: flex;
+    justify-content: flex-end;
+    padding-inline-end: 50px;
+}
+
+.mat-mdc-tab-group {
+  background-color: transparent;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.mat-mdc-tab-label-container {
+  border-bottom: none !important;
+}
+
+.mdc-tab-indicator__content--underline {
+  color: #fb0251 !important;
+}
+
+::ng-deep .mat-mdc-tab-group .mat-mdc-tab-indicator {
+  justify-content: center; 
+}
+
+::ng-deep .mat-mdc-tab-group .mat-mdc-tab-indicator .mat-mdc-tab-indicator-content {
+  width: auto; 
+  background-color: #fb0251; 
+}
+
+::ng-deep .mat-mdc-tab-group .mat-mdc-tab-label:hover {
+  color: #fb0251;
+}
+
+.mdc-tab__text-label {
+  padding: 15px;
+  font-weight: bold;
+}
+
+.accordion-container {
+  padding: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.remove-border-bottom {
+  ::ng-deep .mat-mdc-tab-group {
+    .mat-mdc-tab-header {
+      border-bottom: none;
+    }
+  }
+}
+
+::ng-deep {
+  .mat-mdc-tab-group {
+    .mat-mdc-tab-header {
+      .mat-mdc-tab-label {
+        min-width: 120px;
+        padding: 0 24px;
+        height: 48px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    
+    .mat-mdc-tab-body-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+}
+
+::ng-deep .mat-mdc-tab-body {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+  

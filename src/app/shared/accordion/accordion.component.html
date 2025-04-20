@@ -1,0 +1,40 @@
+<div class="table-header">
+  <span class="table-title">Pricing Sheet Summary</span>
+</div>
+
+<div class="tablw-start">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Define columns -->
+    <ng-container matColumnDef="lotNumber">
+      <th mat-header-cell *matHeaderCellDef> Lot Number </th>
+      <td mat-cell *matCellDef="let element"> {{element.lotNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="lotName">
+      <th mat-header-cell *matHeaderCellDef> Lot Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.lotName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="lineItems">
+      <th mat-header-cell *matHeaderCellDef> Number of Line Items </th>
+      <td mat-cell *matCellDef="let element"> {{element.lineItems}} </td>
+    </ng-container>
+    <ng-container matColumnDef="lotPrice">
+      <th mat-header-cell *matHeaderCellDef> Lot Price </th>
+      <td mat-cell *matCellDef="let element"> {{element.lotPrice | currency:'INR'}} </td>
+    </ng-container>
+    <ng-container matColumnDef="rank">
+      <th mat-header-cell *matHeaderCellDef> Rank </th>
+      <td mat-cell *matCellDef="let element"> {{element.rank}} </td>
+    </ng-container>
+    <ng-container matColumnDef="bestBid">
+      <th mat-header-cell *matHeaderCellDef> Best Bid </th>
+      <td mat-cell *matCellDef="let element"> {{element.bestBid | currency:'INR'}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<h3 class="title-padding">Lot 1 Copy</h3>
+<div class="content">
+    <app-virtual-scroll-table></app-virtual-scroll-table>
+</div>

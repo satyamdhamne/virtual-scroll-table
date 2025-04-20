@@ -1,0 +1,57 @@
+/* filepath: g:\angular_assignment_table\virtual-scroll-table\src\app\shared\accordion\accordion.component.scss */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-inline-start:40px
+  }
+
+  .tablw-start{
+    padding-inline-start:40px
+  }
+  
+  .table-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .event-currency {
+    display: flex;
+    align-items: end;
+    gap: 8px;
+  }
+  
+  mat-slide-toggle {
+    font-size: 14px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .slide-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    padding-inline-end: 50px;
+    }
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .title-padding{
+    padding-inline-start: 40px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content{
+    padding-inline-start: 40px;
+}

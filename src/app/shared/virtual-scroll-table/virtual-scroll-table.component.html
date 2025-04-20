@@ -1,0 +1,33 @@
+<!-- src/app/shared/virtual-scroll-table/virtual-scroll-table.component.html -->
+<div class="virtual-scroll-container">
+  <!-- Using async pipe for automatic subscription management -->
+  <ng-container *ngIf="data$ | async as data; else loading">
+    <div class="table-container">
+      <table mat-table [dataSource]="data" class="virtual-table">
+        <!-- Dynamic columns based on CSV headers -->
+        <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+          <!-- Header cell -->
+          <th mat-header-cell *matHeaderCellDef>
+            {{column}}
+          </th>
+          
+          <!-- Data cell with conditional formatting -->
+          <td mat-cell *matCellDef="let element" [ngClass]="{'numeric-cell': column.includes('Price') || column === 'Quantity' || column === 'RM' || column === 'MF'}">
+            {{formatCellContent(element[column], column)}}
+          </td>
+        </ng-container>
+
+        <!-- Header and Data Rows -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </ng-container>
+
+  <!-- Loading template -->
+  <ng-template #loading>
+    <div class="loading-spinner">
+      <mat-spinner diameter="40"></mat-spinner>
+    </div>
+  </ng-template>
+</div>
