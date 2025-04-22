@@ -4,10 +4,14 @@
 
 <mat-tab-group 
   class="remove-border-bottom" 
-  [selectedIndex]="selectedTabIndex"
+  [(selectedIndex)]="selectedTabIndex"
+  animationDuration="150ms"
+  [disableRipple]="false"
+  [preserveContent]="true"
   (selectedIndexChange)="onTabChange($event)"
-  animationDuration="0ms"> 
+  > 
   <mat-tab label="Questionaire">
+    <h1>Mat tab works</h1>
   </mat-tab>
   <mat-tab label="Pricing Sheet">
     <div class="accordion-container">

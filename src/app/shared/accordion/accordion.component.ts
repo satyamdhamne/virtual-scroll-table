@@ -29,5 +29,4 @@ export class AccordionComponent {
       bestBid: 20962640
     }
   ];
-
 }

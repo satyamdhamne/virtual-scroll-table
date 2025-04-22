@@ -27,11 +27,14 @@
   width: 100%;
   min-width: 1200px;
   background: white;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 // Row styles
 .mat-mdc-row {
   min-height: 48px;
+  border-bottom: 1px solid #e0e0e0;
   
   &:nth-child(even) {
     background-color: #f8f9fa;
@@ -42,6 +45,7 @@
 .mat-mdc-header-row {
   background-color: #f8f9fa;
   min-height: 48px;
+  border-bottom: 2px solid #dee2e6;
 }
 
 th.mat-mdc-header-cell {
@@ -53,6 +57,7 @@ th.mat-mdc-header-cell {
   position: sticky !important;
   top: 0;
   z-index: 10;
+  box-shadow: 0 2px 0 0 #dee2e6;
 
   &:first-child {
     border-top-left-radius: 8px;
@@ -66,6 +71,11 @@ th.mat-mdc-header-cell {
 // Cell styles
 .mat-mdc-cell, .mat-mdc-header-cell {
   padding: 12px 8px;
+  border-right: 1px solid #e0e0e0;
+  
+  &:last-child {
+    border-right: none;
+  }
   
   // Custom widths for specific columns
   &:first-child { // Sr. No.
